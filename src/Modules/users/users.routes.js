@@ -1,12 +1,13 @@
-import React from "react";
-import {Switch, Route} from "react-router-dom";
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import UsersList from './UsersList';
 
-const UsersRoutes = ({match:{url}}) => {
-    return (
-        <Switch>
-            <Route path={`${url}`} component={() => <>Tasks Sub</>} />
-        </Switch>
-      );
+const UsersRoutes = ({ match: { url } }) => {
+  return (
+    <Switch>
+      <Route path={`${url}`} component={UsersList} />
+    </Switch>
+  );
 };
 
 export default UsersRoutes;

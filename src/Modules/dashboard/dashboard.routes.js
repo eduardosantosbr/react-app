@@ -1,12 +1,13 @@
-import React from "react";
-import {Switch, Route} from "react-router-dom";
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Dashboard from './Dashboard';
 
-const DashboardRoutes = ({match:{url}}) => {
-    return (
-        <Switch>
-            <Route path={`${url}`} component={() => <>Dashboard Sub</>} />
-        </Switch>
-      );
+const DashboardRoutes = ({ match: { url } }) => {
+  return (
+    <Switch>
+      <Route path={`${url}`} component={Dashboard} />
+    </Switch>
+  );
 };
 
 export default DashboardRoutes;

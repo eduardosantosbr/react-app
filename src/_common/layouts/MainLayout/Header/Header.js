@@ -1,7 +1,12 @@
- import HeaderView from "./HeaderView";
+import HeaderView from './HeaderView';
+import { useContext } from 'react';
+import { MainLayoutContext } from '../context/MainLayoutContext';
 
 const Header = () => {
-    return <HeaderView />
-}
+  const { sidebarOpen, setSidebarOpen } = useContext(MainLayoutContext);
+
+  const handleToggleSidebar = () => setSidebarOpen(!sidebarOpen);
+  return <HeaderView {...{ handleToggleSidebar }} />;
+};
 
 export default Header;
